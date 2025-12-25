@@ -1,0 +1,40 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="IndependentTTest.js" />
+	<help file="IndependentTTest.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Independent T-Test">
+		<row id="row_vDVGVTSWUV">
+			<varselector id="var_selector" />
+			<column id="clm_vDVGVTSWUV">
+				<varslot id="t_dv" label="Dependent Variable" source="var_selector" classes="numeric" required="true" />
+				<varslot id="t_grp" label="Grouping Variable" source="var_selector" required="true" />
+				<radio id="t_type" label="Test">
+					<option label="Student's t" value="student" />
+					<option label="Welch's t (Unequal Variances)" value="welch" checked="true" />
+					<option label="Mann-Whitney U" value="mann" />
+				</radio>
+				<checkbox id="t_eff" label="Effect Size" value="1" checked="true" />
+				<checkbox id="t_desc" label="Descriptives" value="1" checked="true" />
+				<checkbox id="t_plot" label="Boxplot + Jitter" value="1" checked="true" />
+				<saveobject label="Save Results" checkable="true" checked="true" initial="ttest_res" id="t_save" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

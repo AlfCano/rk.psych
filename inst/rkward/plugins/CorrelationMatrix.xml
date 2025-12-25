@@ -1,0 +1,37 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="CorrelationMatrix.js" />
+	<help file="CorrelationMatrix.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Correlation Matrix">
+		<row id="row_vVMPSFSC1P">
+			<varselector id="var_selector" />
+			<column id="clm_vVMPSFSC1P">
+				<varslot id="c_vars" label="Variables" source="var_selector" classes="numeric" required="true" multi="true" />
+				<dropdown id="c_method" label="Method">
+					<option label="Pearson" value="pearson" checked="true" />
+					<option label="Spearman" value="spearman" />
+				</dropdown>
+				<checkbox id="c_sig" label="Flag Significant Correlations" value="1" checked="true" />
+				<checkbox id="c_plot" label="Plot Heatmap" value="1" checked="true" />
+				<saveobject label="Save Matrix" checkable="true" checked="true" initial="cor_res" id="c_save" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

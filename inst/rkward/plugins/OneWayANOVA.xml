@@ -1,0 +1,37 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="OneWayANOVA.js" />
+	<help file="OneWayANOVA.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="One-Way ANOVA">
+		<row id="row_vDVFOOESGE">
+			<varselector id="var_selector" />
+			<column id="clm_vDVFOOESGE">
+				<varslot id="a_dv" label="Dependent Variable" source="var_selector" classes="numeric" required="true" />
+				<varslot id="a_fac" label="Factor" source="var_selector" required="true" />
+				<frame label="Options" id="frm_Options">
+					<checkbox id="a_eff" label="Effect Size (Generalized Eta Squared)" value="1" checked="true" />
+					<checkbox id="a_post" label="Post-Hoc Test (Tukey HSD)" value="1" checked="true" />
+					<checkbox id="a_homo" label="Homogeneity (Levene's Test)" value="1" checked="true" />
+				</frame>
+				<saveobject label="Save ANOVA Object" checkable="true" checked="true" initial="anova_res" id="a_save" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

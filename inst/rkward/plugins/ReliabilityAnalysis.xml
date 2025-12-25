@@ -1,0 +1,33 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ReliabilityAnalysis.js" />
+	<help file="ReliabilityAnalysis.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Reliability Analysis">
+		<row id="row_vIOOITS1SO">
+			<varselector id="var_selector" />
+			<column id="clm_vIOOITS1SO">
+				<varslot id="r_vars" label="Items" source="var_selector" classes="numeric" required="true" multi="true" />
+				<frame label="Options" id="frm_Options">
+					<checkbox id="r_item" label="Item-Total Statistics" value="1" checked="true" />
+				</frame>
+				<saveobject label="Save Object" checkable="true" checked="true" initial="rel_res" id="r_save" />
+			</column>
+		</row>
+	</dialog>
+</document>

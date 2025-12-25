@@ -1,0 +1,157 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="IndependentTTest"
+	id="IndependentTTest_rkward"
+	po_id="IndependentTTest_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.psych"
+		shortinfo="An RKWard plugin for Psychology/Social Sciences (Frequentist Suite). Features 'All-in-One' dialogs for T-Tests, ANOVA, Correlation, and Reliability."
+		longinfo="An RKWard plugin for Psychology/Social Sciences (Frequentist Suite). Features 'All-in-One' dialogs for T-Tests, ANOVA, Correlation, and Reliability."
+		version="0.0.1"
+		releasedate="2025-12-24"
+		url="https://github.com/AlfCano/rk.psych"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_IndependentTTestOnWyANOVA"
+			label="One-Way ANOVA"
+			type="standard"
+			file="plugins/OneWayANOVA.xml"
+		>
+		</component>
+		<component
+			id="cmp_IndependentTTstCrrltnMtrx"
+			label="Correlation Matrix"
+			type="standard"
+			file="plugins/CorrelationMatrix.xml"
+		>
+		</component>
+		<component
+			id="cmp_IndepndntTTstRlbltyAnlyss"
+			label="Reliability Analysis"
+			type="standard"
+			file="plugins/ReliabilityAnalysis.xml"
+		>
+		</component>
+		<component
+			id="cmp_IndepndntTTstIndpndntTTst"
+			label="Independent T-Test"
+			type="standard"
+			file="plugins/IndependentTTest.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_IndependentTTestOnWyANOVA"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_IndependentTTstCrrltnMtrx"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_IndepndntTTstRlbltyAnlyss"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_IndepndntTTstIndpndntTTst"
+					/>
+				</menu>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>
